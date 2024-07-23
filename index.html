@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- contact form -->
+  <form class="contact_form">
+    <div class="container">
+      <h1 class="contact_form-heading">Contact Us</h1>
+
+      <div class="contact_form-field">
+        <label class="contact_form-label" for="f_name">First Name *</label>
+        <input type="text" id="f_name" class="contact_form-input" required>
+        <p class="contact_form-error hide">This field is required</p>
+      </div>
+
+      <div class="contact_form-field">
+        <label class="contact_form-label" for="l_name">Last Name *</label>
+        <input type="text" id="l_name" class="contact_form-input" required>
+        <p class="contact_form-error hide">This field is required</p>
+      </div>
+
+      <div class="contact_form-field">
+        <label class="contact_form-label" for="email">Email Address *</label>
+        <input type="email" id="email" class="contact_form-input" required>
+        <p class="contact_form-error hide">This field is required</p>
+      </div>
+
+      <div class="contact_form-field">
+        <label class="contact_form-label">Query Type *</label>
+        <div class="contact_form-query-options">
+          <div class="contact_form-query-option">
+            <input name="query" value="general_enquiry" type="radio" class="contact_form-query-rbtn" id="o1">
+            <label class="contact_form-label" for="o1">General Enquiry</label>
+          </div>
+          <div class="contact_form-query-option">
+            <input name="query" value="support_request" type="radio" class="contact_form-query-rbtn" id="o2">
+            <label class="contact_form-label" for="o2">Support Request</label>
+          </div>
+        </div>
+        <p class="contact_form-error hide">Please select a query type</p>
+      </div>
+
+      <div class="contact_form-field">
+        <label class="contact_form-label" for="msg">Message *</label>
+        <textarea name="message" class="contact_form-msg-area" id="msg"></textarea>
+        <p class="contact_form-error hide">This field is required</p>
+      </div>
+
+      <div class="contact_form-field">
+        <div class="contact_form-terms-text">
+          <input type="checkbox" id="agree" class="contact_form-check">
+          <label class="contact_form-label" for="agree">I consent to being contacted by the team *</label>
+        </div>
+        <p class="contact_form-error hide">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <input type="submit" value="Submit" class="contact_form-subtn">
+    </div>
+  </form>
+  <!-- /contact form -->
+  <!-- pop sucess msg -->
+  <div class="pop_up">
+    <h3 class="pop_up-title"><img src="assets/images/icon-success-check.svg">Message Sent!</h3>
+    <p class="pop_up-msg">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <!-- /pop sucess msg -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
